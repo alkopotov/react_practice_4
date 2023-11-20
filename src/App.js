@@ -8,7 +8,7 @@ import ProductInfoPage from './pages/ProductInfoPage';
 function App() {
   return (
     <div>
-      <Router>
+      <Router basename='/react_practice_4'>
         <Routes>
           <Route path='*' element={<NotFoundPage/>}/>
           <Route path='/products' element={<Products/>}/>
