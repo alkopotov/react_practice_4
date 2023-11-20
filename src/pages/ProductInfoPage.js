@@ -29,15 +29,13 @@ function ProductInfoPage() {
     }
   }, [id])
 
-  // console.log('rating', product.rating['rate'])
-
   return (
     <div className="product_info">
       <h3>{product.title}</h3>
       <img src={product.image} className="product_pict" alt={product.title + 'picture'}/>
       <h4>Цена: {product.price}$</h4>
       <p>{product.description}</p>
-      {/* <Rating rating={Math.round(+product.rating.rate)}/> */}
+      <Rating rating={Math.round(+product.rating?.rate)}/>
       <Button title={'Назад'} color={'yellow'} onClick={() => navigate(-1)}/>
     </div>
   )
